@@ -25,7 +25,7 @@ function Item({name, price, image}) {
     return (
         <a href="#" className="group overflow-hidden">
             <img
-                src={image || "https://media.licdn.com/dms/image/v2/D5603AQFmx_U3iZ_nmg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720714725677?e=1751500800&v=beta&t=ZMUrgzYDxE8A26w_IHiJ_WHm4_j5nuVoiD775ZU8i6M"}
+                src={"https://media.licdn.com/dms/image/v2/D5603AQFmx_U3iZ_nmg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720714725677?e=1751500800&v=beta&t=ZMUrgzYDxE8A26w_IHiJ_WHm4_j5nuVoiD775ZU8i6M" || image}
                 alt=""
                 className="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
             />
