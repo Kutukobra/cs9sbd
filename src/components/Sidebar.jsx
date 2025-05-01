@@ -107,7 +107,6 @@ function Sidebar() {
                         balance={user.balance || 0}
                     />
                 :
-                <Link>
                 <div className="absolute inset-x-0 bottom-10 left-3 border-t border-gray-100">
                     <Link to="/login" className="flex items-center bg-white p-1 hover:bg-gray-50">
 
@@ -118,7 +117,6 @@ function Sidebar() {
                     </div>
                     </Link>
                 </div>
-                </Link>
             }
         </aside>
     )
