@@ -25,14 +25,14 @@ function Item({name, price, image}) {
     return (
         <a href="#" className="group overflow-hidden">
             <img
-                src={"https://media.licdn.com/dms/image/v2/D5603AQFmx_U3iZ_nmg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720714725677?e=1751500800&v=beta&t=ZMUrgzYDxE8A26w_IHiJ_WHm4_j5nuVoiD775ZU8i6M" || image}
+                src={image}
                 alt=""
                 className="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
             />
 
             <div className="relative border border-gray-100 bg-white p-6">
 
-                <h3 className="mt-4 text-lg font-medium text-gray-900">{}</h3>
+                <h3 className="mt-4 text-lg font-medium text-gray-900">{name}</h3>
 
                 <p className="mt-1.5 text-sm text-gray-700">{price}</p>
 

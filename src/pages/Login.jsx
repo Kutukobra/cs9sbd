@@ -9,12 +9,16 @@ function Login() {
 
     const [loginError, setLoginError] = useState(false);
 
+    const [loading, setLoading] = useState(false);
+
     const handleSubmit = async (e) => {
         try {
             e.preventDefault();
+            setLoading(true);
             const response = await axios.post(
                 "/user/login?" + `email=${email}&password=${password}`,
             );
+            setLoading(false);
 
             setUser(response.data.payload);
             
@@ -83,9 +87,12 @@ function Login() {
                     <div>
                         <button
                         type="submit"
-                        className="flex w-full justify-center rounded-md bg-yellow-400 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-yellow-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600 cursor-pointer"
+                        className={
+                            "flex w-full justify-center rounded-md px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-yellow-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600 cursor-pointer"
+                            + loading ? " bg-yellow-400 cursor-not-allowed" : " bg-yellow-500"
+                        }
                         >
-                        Sign in
+                        {loading ? "Signing in..." : "Sign in"}
                         </button>
                     </div>
                     </form>
