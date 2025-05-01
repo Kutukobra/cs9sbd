@@ -104,6 +104,7 @@ function Sidebar() {
                     <Profile
                         name={user.name}
                         email={user.email}
+                        balance={user.balance || 0}
                     />
                 :
                 <Link>

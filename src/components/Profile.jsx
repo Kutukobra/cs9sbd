@@ -1,4 +1,4 @@
-function Profile({name, email}) {
+function Profile({name, email, balance}) {
     return (
         <div className="absolute inset-x-0 bottom-10 border-t border-gray-100">
             <a href="#" className="flex items-center gap-2 bg-white p-4 hover:bg-gray-50">
@@ -14,6 +14,9 @@ function Profile({name, email}) {
 
                 <span> {email} </span>
                 </p>
+                <span>
+                    {balance}
+                </span>
             </div>
             </a>
         </div>
