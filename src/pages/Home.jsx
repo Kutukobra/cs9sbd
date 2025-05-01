@@ -24,7 +24,11 @@ function Home() {
     }, []);
 
     if (loading)
-        return <Mosaic color="#FDC700"/>
+        return (
+            <div className="flex min-h-full mt-52 h-screen justify-center align-middle">
+                <Mosaic color="#FDC700" />
+            </div>
+        )
 
     return (
         <div>
