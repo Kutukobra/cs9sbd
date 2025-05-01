@@ -87,10 +87,11 @@ function Login() {
                     <div>
                         <button
                         type="submit"
-                        className={
-                            "flex w-full justify-center rounded-md px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-yellow-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600 cursor-pointer"
-                            + loading ? " bg-yellow-400 cursor-not-allowed" : " bg-yellow-500"
-                        }
+                        className={`flex w-full justify-center rounded-md px-3 py-1.5 text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600 ${
+                            loading
+                              ? "bg-yellow-300 cursor-not-allowed text-white"
+                              : "bg-yellow-400 hover:bg-yellow-500 text-white"
+                          }`}
                         >
                         {loading ? "Signing in..." : "Sign in"}
                         </button>
